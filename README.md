@@ -10,6 +10,7 @@ thesjggarden.github.io/
 ├── assets/               # Imágenes, CSS, JS
 
 │   ├── css/
+Main
 
 │   ├── js/
 
