@@ -1,0 +1,53 @@
+
+
+
+
+scss---
+---
+
+@import "minima";
+
+// Variables para modo oscuro
+$background-color: #121212;
+$text-color: #e0e0e0;
+$heading-color: #ffffff;
+$link-color: #4dabf7;
+$link-hover-color: #74c0fc;
+$border-color: #333333;
+
+// Aplicar modo oscuro al cuerpo
+body {
+  background-color: $background-color;
+  color: $text-color;
+}
+
+// Estilos para encabezados
+h1, h2, h3, h4, h5, h6 {
+  color: $heading-color;
+}
+
+// Estilos para enlaces
+a {
+  color: $link-color;
+  
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+// Estilos para la navegación
+.site-header {
+  border-bottom: 1px solid $border-color;
+  background-color: darken($background-color, 3%);
+}
+
+.site-footer {
+  border-top: 1px solid $border-color;
+  background-color: darken($background-color, 3%);
+}
+
+// Estilos para código
+pre, code {
+  background-color: darken($background-color, 5%);
+  border: 1px solid $border-color;
+}
