@@ -2,8 +2,10 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "minima";
+---
+---
 
+@import "minima";
 
 // Variables para modo oscuro
 $background-color: #121212;
@@ -13,105 +15,30 @@ $link-color: #4dabf7;
 $link-hover-color: #74c0fc;
 $border-color: #333333;
 
-// Aplicar modo oscuro al cuerpo
-body {
-  background-color: $background-color;
-  color: $text-color;
+// Aplicar modo oscuro con mayor especificidad
+body, .site-body, .page-content {
+  background-color: $background-color !important;
+  color: $text-color !important;
 }
 
-// Estilos para encabezados
+.site-header, .site-footer {
+  background-color: darken($background-color, 3%) !important;
+  border-color: $border-color !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
-  color: $heading-color;
+  color: $heading-color !important;
 }
 
-// Estilos para enlaces
-a {
-  color: $link-color;
+a, a:visited, .site-title, .site-nav .page-link {
+  color: $link-color !important;
   
   &:hover {
-    color: $link-hover-color;
+    color: $link-hover-color !important;
   }
 }
 
-// Estilos para la navegación
-.site-header {
-  border-bottom: 1px solid $border-color;
-  background-color: darken($background-color, 3%);
-}
-
-.site-footer {
-  border-top: 1px solid $border-color;
-  background-color: darken($background-color, 3%);
-}
-
-// Estilos para código
-pre, code {
-  background-color: darken($background-color, 5%);
-  border: 1px solid $border-color;
-}
-
-// Estilos para tarjetas de post
-.post-list {
-  li {
-    background-color: darken($background-color, 2%);
-    border: 1px solid $border-color;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-3px);
-    }
-  }
-}
-
-// Estilos para botones
-.btn {
-  background-color: $link-color;
-  color: #ffffff;
-  padding: 8px 15px;
-  border-radius: 4px;
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  
-  &:hover {
-    background-color: $link-hover-color;
-    text-decoration: none;
-  }
-}
-
-// Mejoras para lectura de código
-pre {
-  border-radius: 4px;
-  padding: 15px;
-  overflow-x: auto;
-}
-
-// Personalizar tablas
-table {
-  border-collapse: collapse;
-  width: 100%;
-  margin-bottom: 20px;
-  
-  th, td {
-    border: 1px solid $border-color;
-    padding: 8px 12px;
-  }
-  
-  th {
-    background-color: darken($background-color, 5%);
-  }
-  
-  tr:nth-child(even) {
-    background-color: darken($background-color, 2%);
-  }
-}
-
-// Personalizar imágenes
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
+.post-list li {
+  background-color: darken($background-color, 2%) !important;
+  border: 1px solid $border-color !important;
 }
