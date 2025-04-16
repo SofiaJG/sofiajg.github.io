@@ -1,16 +1,15 @@
 title: The SJG Garden
 description: Mi viaje como diseñadora adentrándome en el mundo de la programación front-end
-url: https://username.github.io
+url: https://tunombredeusuario.github.io
 baseurl: ""
 
-# Tema
-remote_theme: jekyll/minima
+# Tema (cambiamos de remote_theme a theme para probar)
+theme: minima
 
 # Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-remote-theme
 
 # Configuración de navegación
 header_pages:
@@ -19,9 +18,9 @@ header_pages:
   - recursos.md
   - noticias.md
 
-# Configuración de colecciones
-collections:
-  proyectos:
-    output: true
-  tutoriales:
-    output: true
+# Excluir archivos y carpetas
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
